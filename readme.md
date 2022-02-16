@@ -25,8 +25,8 @@ class Encoder(nn.Module):
 
 ## 2. 算法思路
 
-1. **编码阶段：**由于输入为126 * 128 * 2的图像，可以使用一个卷积层使得通道数增加为3，然后使用efficientnet_b1模型（去除分类层）提取特征。然后通过一个全连接层降维，另一个全连接层输出编码向量
-2. **解码阶段：**解码阶段不做修改
+1. **编码阶段：** 由于输入为126 * 128 * 2的图像，可以使用一个卷积层使得通道数增加为3，然后使用efficientnet_b1模型（去除分类层）提取特征。然后通过一个全连接层降维，另一个全连接层输出编码向量
+2. **解码阶段：** 解码阶段不做修改
 
 
 
@@ -54,11 +54,11 @@ class Encoder(nn.Module):
 ### b. 项目运行办法
 #### i. 项目的文件结构
 #### ii. 项目的运行步骤
-1. **模型训练：**Python Model_train.py
+1. **模型训练：** Python Model_train.py
    - 在Modelsave文件夹中生成结果文件：encoder.pth.tar、decoder.pth.tar
-2. **模型验证-编码阶段：**Python Model_evaluation_encoder.py
+2. **模型验证-编码阶段：** Python Model_evaluation_encoder.py
    - 在Modelsave文件夹中生成结果文件：encoder_output.npy
-3. **模型验证-解码阶段：**Python Model_evaluation_decoder.py
+3. **模型验证-解码阶段：** Python Model_evaluation_decoder.py
    - 在终端中输出模型最终得分
 
 #### 运行结果的位置
